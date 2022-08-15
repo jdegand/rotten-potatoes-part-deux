@@ -1,0 +1,19 @@
+<!-- action="/movies/{{review.movieId}}/reviews/comments" method="post" -->
+
+<form action="#" id="new-comment">
+  <fieldset>
+
+    <div class="form-group">
+        <label for="title">Comment Title</label><br>
+        <input class="form-control" id="title" type="text" name="title" value="{{comment.title}}" />
+    </div>
+  
+    <div class="form-group">
+        <label for="content">Content</label><br>
+        <textarea class="form-control" id="content" name="content" rows="10" />{{comment.content}}</textarea>
+    </div>
+    <input type="hidden" class="form-control" value="{{review.movieId}}" name="movieId">
+    <input type="hidden" class="form-control" value="{{review._id}}" name="reviewId">
+  </fieldset>
+  <button class="btn btn-primary" >Save Comment</button>
+</form>
